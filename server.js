@@ -4,7 +4,7 @@ const dotenv = require("dotenv")
 dotenv.config()
 const PORT = process.env.PORT || 3000
 const connectDB = require("./db/connect")
-const {createTable, getUser} = require("./db/sqlFunctions")
+const {getUser} = require("./db/sqlFunctions")
 
 app.use(express.json())
 connectDB()
