@@ -14,7 +14,6 @@ app.get("/", (req, res) => {
 })
 
 app.get("/users", async (req, res) => {
-    createTable()
     getUser()
         .then((result) => {
             res.json(result)
