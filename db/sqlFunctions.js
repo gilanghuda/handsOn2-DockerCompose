@@ -16,4 +16,4 @@ const getUser = async () => {
     })
 }
 
-module.exports = {createTable, getUser}
+module.exports = {getUser}
