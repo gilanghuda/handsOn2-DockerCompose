@@ -1,16 +1,16 @@
 const { Pool } = require("pg")
 const config = require("./config")
+const pool = new Pool(config)
 
 const connectDB = async () => {
-  const pool = new Pool(config)
-
   try {
     const client = await pool.connect() 
     console.log("Connected to database")
     client.release()
+    return pool
   } catch (err) {
     console.error({ err }) 
   }
 }
 
-module.exports = connectDB
+module.exports = {connectDB, pool}

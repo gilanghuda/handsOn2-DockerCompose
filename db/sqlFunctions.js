@@ -1,6 +1,4 @@
-const {Pool} = require("pg")
-const config = require("./config")
-const pool = new Pool(config)
+const {pool} = require("./connect")
 
 const getUser = async () => { 
     return new Promise((resolve, reject) => {
